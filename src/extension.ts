@@ -18,7 +18,12 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.window.showInformationMessage('Hello World from reg-visualizer!');
   });
 
+  const disposable2 = vscode.commands.registerCommand('reg-visualizer.visualize', () => {
+    vscode.window.showInformationMessage(`visualize working`);
+  });
+
   context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable2);
 }
 
 // this method is called when your extension is deactivated
