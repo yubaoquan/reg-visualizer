@@ -406,6 +406,11 @@ ajv@^6.10.0, ajv@^6.12.4, ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+amdefine@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+  integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+
 ansi-colors@4.1.1, ansi-colors@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
@@ -1985,6 +1990,13 @@ regexpp@^3.2.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/regexpp/-/regexpp-3.2.0.tgz#0425a2768d8f23bad70ca4b90461fa2f1213e1b2"
   integrity sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==
+
+regulex@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/regulex/-/regulex-0.0.5.tgz#a61003f953ad694c82f70542184556784e5645ef"
+  integrity sha512-Q9DBpVUU6Nq+mM7GE9ApXDeRImAugxOKpDjR21G9/TiPRKRYc9legbj94ZdFmsjTbJSbwZIZmoCUgeUFtEU3pA==
+  dependencies:
+    amdefine "~1.0.0"
 
 require-directory@^2.1.1:
   version "2.1.1"
