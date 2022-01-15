@@ -2,6 +2,9 @@
   "name": "reg-visualizer",
   "displayName": "reg-visualizer",
   "description": "Preview the selected js RexExp.",
+  "repository": {
+    "url": "https://github.com/yubaoquan/reg-visualizer"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.63.0"
@@ -10,16 +13,11 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:reg-visualizer.helloWorld",
     "onCommand:reg-visualizer.visualize"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "reg-visualizer.helloWorld",
-        "title": "Hello World2"
-      },
       {
         "command": "reg-visualizer.visualize",
         "title": "RegExp Visualize"
@@ -33,6 +31,39 @@
           "group": "1_modification"
         }
       ]
+    },
+    "configuration": {
+      "title": "Reg Visualizer",
+      "properties": {
+        "reg-visualizer.webview-mode": {
+          "type": "string",
+          "default": "single",
+          "description": "Whether add a new webview on each visualization.",
+          "enum": [
+            "single",
+            "multiple"
+          ],
+          "enumDescriptions": [
+            "Only show one webview all the time, new regexp replace old one.",
+            "Each regexp visualization opens a new webview."
+          ]
+        },
+        "reg-visualizer.hide-header": {
+          "type": "boolean",
+          "default": false,
+          "description": "Hide the header section of webview, including title and github fork icon."
+        },
+        "reg-visualizer.hide-fork": {
+          "type": "boolean",
+          "default": false,
+          "description": "Hide the github fork icon."
+        },
+        "reg-visualizer.hide-footer": {
+          "type": "boolean",
+          "default": false,
+          "description": "Hide the footer section of webview."
+        }
+      }
     }
   },
   "scripts": {

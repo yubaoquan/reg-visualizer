@@ -108,6 +108,17 @@ function init(R, visualize, parse, K) {
     }
   };
 
+  const initMessage = () => {
+    window.addEventListener('message', (msg) => {
+      console.info(msg.data);
+      if (msg.data.type === 'reg') {
+        const { regText } = msg.data;
+        input.value = regText;
+        visualIt();
+      }
+    });
+  };
+
   const dragGraph = (g) => {
     const startMove = (evt) => {
       window.getSelection().empty();
@@ -160,6 +171,7 @@ function init(R, visualize, parse, K) {
 
   visualIt();
   initListeners();
+  initMessage();
   dragGraph($('graphCt'));
 }
 

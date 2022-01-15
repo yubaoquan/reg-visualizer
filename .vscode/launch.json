@@ -11,7 +11,7 @@
 			"request": "launch",
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}",
-        "--folder-uri=D:/desktop/za/demo"
+        "--folder-uri=/Users/baoquanyu/Documents/code/rust/minigrep"
 			],
 			"outFiles": [
 				"${workspaceFolder}/dist/**/*.js"

@@ -190,8 +190,6 @@ body.embed #graphCt {
   height: 100vh;
 }
 
-.exportCanvas {
-  display: block;
-  margin: 0 auto;
-  image-rendering: pixelated;
+.flags-container {
+  padding: 10px 0;
 }
