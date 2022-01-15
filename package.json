@@ -5,10 +5,17 @@
   "repository": {
     "url": "https://github.com/yubaoquan/reg-visualizer"
   },
+  "icon": "images/logo.png",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.63.0"
   },
+  "keywords": [
+    "RegExp",
+    "reg",
+    "visualizer",
+    "javascript"
+  ],
   "categories": [
     "Other"
   ],
