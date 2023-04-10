@@ -16,7 +16,14 @@ const defaultOptions: Options = {};
 
 export const composeHTML = (reg: string, { hideHeader, hideFork, hideFooter } = defaultOptions) => {
   let html = htmlTemplate;
-  const finalLogicCode = logic.replace('==regexp==', reg.replace(/\\/g, '\\\\'));
+
+  /*
+   * 只替换 reg 中的反斜杠, 不要替换 logic 中的反斜杠, 所以替换反斜杠时在 reg 上调用 replace
+   * 整个 logic 中的 $ 要替换成 $$, 以便在后面组装 html 时调用 replace 再转义回 $, 所以替换 $ 时在 logic 上调用 replace
+   */
+  const finalLogicCode = logic
+    .replace('==regexp==', reg.replace(/\\/g, '\\\\'))
+    .replace(/\$/g, '$$$$');
 
   if (!hideHeader) {
     html = html.replace('<!-- ==header== -->', header);
