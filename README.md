@@ -52,3 +52,7 @@ NAN
 ### 0.0.1
 
 Initial release
+
+### 0.0.2
+
+Fix error when selection contains `$`, [Extension doesn't load selected regular expressions in view](https://github.com/yubaoquan/reg-visualizer/issues/1)
